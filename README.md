@@ -4,7 +4,7 @@ clone this repository Laravel folder
 
 add .env root password
 
-DB_ROOT_PASSWORD=testo
+DB_ROOT_PASSWORD=yourpassword
 
 
 ```sh
