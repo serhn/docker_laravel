@@ -25,12 +25,13 @@ services:
         container_name: mysql
         restart: always
         env_file:
-            - "../.env"
+            - "./.env"
         environment:
             - MYSQL_DATABASE=${DB_DATABASE}
-            - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
             - MYSQL_USER=${DB_USERNAME}
             - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_ROOTPASS}
+  
         ports:
             - "3306:3306"
         volumes:

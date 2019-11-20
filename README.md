@@ -4,10 +4,11 @@ clone this repository Laravel folder
 
 add .env root password
 
-DB_ROOT_PASSWORD=yourpassword
+DB_ROOTPASS=yourpassword
 
 
 ```sh
 cd docker_laravel
+ln -s ../.env ./
 docker-compose up
 ```
