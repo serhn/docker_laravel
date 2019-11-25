@@ -1,6 +1,6 @@
 #!/bin/sh
 #stop server 80 port
-docker run --rm -it -v ${PWD}/../etc/letsencrypt:/etc/letsencrypt -p 80:80 certbot/certbot certonly --authenticator standalone
+docker run --rm -it -v /etc/letsencrypt:/etc/letsencrypt -p 80:80 certbot/certbot certonly --authenticator standalone
 
 
 ## renewal
