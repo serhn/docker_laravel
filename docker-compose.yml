@@ -8,15 +8,16 @@ services:
             - "../:/usr/share/nginx:cached"
         ports:
             - "8000:80"
-            - "3000:443"
+            - "44300:443"
         restart: always
         depends_on:
             - php
+        container_name: nginx
+
     php:
         image: serh/docker-php73dev
         restart: always
         container_name: php
-        #       command: /bin/sh -c "cd /usr/share/nginx; php artisan config:cache;"
         volumes:
             - "./etc/php/php.ini-development:/usr/local/etc/php/php.ini:cached"
             - "../:/usr/share/nginx:cached"
