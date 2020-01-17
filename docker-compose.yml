@@ -35,6 +35,15 @@ services:
             - "6001:6001"
         environment:
             - REDIS_HOST=redis-cache
+    
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        container_name: phpmyadmin
+        environment:
+            - PMA_HOSTS=mysql
+        ports:
+            - "8001:80"
 
     mysql:
         image: mysql:5.7
