@@ -15,7 +15,7 @@ services:
         container_name: nginx
 
     php:
-        image: serh/docker-php73dev
+        image: serh/docker-php74dev
         restart: always
         container_name: php
         volumes:
