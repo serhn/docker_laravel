@@ -61,3 +61,12 @@ services:
             - "3306:3306"
         volumes:
             - "./db/mysql:/var/lib/mysql:cached"
+    mongo:
+        container_name: mysql
+        image: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: ${DB_PASSWORD}
+            MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSROOT}
+        volumes:
+            - "./db/mongodb:/bitnami/mongodb"
