@@ -1,14 +1,41 @@
 ## docker-compose for laravel
 
-clone this repository Laravel folder
+create laravel project
 
-add .env root password
+```sh
+composer create-project laravel/laravel laravel
+```
+
+
+clone this repository in laravel folder
+
+```sh
+cd laravel
+git clone https://github.com/serhn/docker.git
+```
+
+
+
+create symlink  .env file
+
+```sh
+cd docker
+ln -s ../.env ./
+
+```
+
+add in file .env 
 
 DB_PASSROOT=yourpassword
 
 
+for auto generate random password run:
+
 ```sh
-cd docker_laravel
-ln -s ../.env ./
+./sh/init.sh
+```
+
+
+```sh
 docker-compose up
 ```
