@@ -2,6 +2,8 @@
 
 DB_HOST="mysql"
 sed -i -r "s/^(DB_HOST ?=).*/\1$DB_HOST/" ./../.env
+DB_USERNAME="laravel"
+sed -i -r "s/^(DB_USERNAME= ?=).*/\1$DB_USERNAME=/" ./../.env
 DB_PASSWORD=$(pwgen 32 1)
 sed -i -r "s/^(DB_PASSWORD ?=).*/\1$DB_PASSWORD/" ./../.env
 DB_PASSROOT=$(pwgen 32 1)
