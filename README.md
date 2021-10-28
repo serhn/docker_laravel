@@ -3,7 +3,9 @@
 create laravel project
 
 ```sh
-composer create-project laravel/laravel laravel
+docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer create-project laravel/laravel laravel
 ```
 
 
