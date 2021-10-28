@@ -5,6 +5,7 @@ create laravel project
 ```sh
 docker run --rm --interactive --tty \
   --volume $PWD:/app \
+  --user $(id -u):$(id -g) \
   composer create-project laravel/laravel laravel
 ```
 
@@ -26,12 +27,9 @@ ln -s ../.env ./
 
 ```
 
-add in file .env 
-
-DB_PASSROOT=yourpassword
 
 
-for auto generate random password run:
+for auto generate random password and add variable run:
 
 ```sh
 ./sh/init.sh
