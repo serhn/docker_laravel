@@ -1,4 +1,5 @@
 #!/bin/sh
+ln -s ../.env ./
 if [ $(grep DB_PASSROOT ../.env | wc -l) = "0" ]
 then
   sed -i -r '/DB_PASSWORD/a DB_PASSROOT=' ./../.env

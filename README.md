@@ -19,14 +19,6 @@ git clone https://github.com/serhn/docker.git
 
 
 
-create symlink  .env file
-
-```sh
-cd docker
-ln -s ../.env ./
-
-```
-
 
 
 for auto generate random password and add variable run:
