@@ -24,6 +24,7 @@ git clone https://github.com/serhn/docker.git
 for auto generate random password and add variable run:
 
 ```sh
+cd docker
 ./sh/init.sh
 ```
 
