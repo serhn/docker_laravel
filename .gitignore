@@ -2,4 +2,5 @@
 /etc/letsencrypt
 /etc/ssl
 .env
+/.ssh
 

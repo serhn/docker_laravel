@@ -22,6 +22,7 @@ services:
         volumes:
             - "./etc/php/php.ini-development:/usr/local/etc/php/php.ini:cached"
             - "../:/usr/share/nginx:cached"
+            - "./.ssh:/root/.ssh"
         environment:
             - TZ=Europe/Kiev
     redis:
