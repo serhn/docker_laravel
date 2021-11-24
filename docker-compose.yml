@@ -39,6 +39,8 @@ services:
             - "6001:6001"
         environment:
             - REDIS_HOST=redis-cache
+            - LARAVEL_ECHO_SERVER_DEBUG=true
+            - LARAVEL_ECHO_SERVER_AUTH_HOST=http://nginx
             - TZ=Europe/Kiev
     
     phpmyadmin:
