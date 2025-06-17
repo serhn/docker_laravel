@@ -3,7 +3,7 @@ services:
     web:
         image: nginx
         volumes:
-            - "./etc/nginx.conf:/etc/nginx/conf.d/default.conf"
+            - "./etc/nginx/nginx.conf:/etc/nginx/conf.d/default.conf"
             - "./etc/letsencrypt:/etc/letsencrypt:cached"
             - "../:/usr/share/nginx:cached"
         ports:
@@ -16,13 +16,12 @@ services:
         environment:
             - TZ=Europe/Kiev
     php:
-        image: serh/php:8.2.7
+        image: serh/php:8.4.8
         restart: always
         container_name: php
         volumes:
             - "./etc/php/php.ini-development:/usr/local/etc/php/php.ini:cached"
             - "../:/usr/share/nginx:cached"
-            - "./.ssh:/root/.ssh"
         environment:
             - TZ=Europe/Kiev
     redis:

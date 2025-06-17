@@ -3,4 +3,4 @@
 /etc/ssl
 .env
 /.ssh
-
+**/.DS_Store
